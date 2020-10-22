@@ -35,3 +35,8 @@ const total = useSelector(totalSelector);
 aquele selector. Caso qualquer uma das informações do estado que não são retornadas
 pelo selector forem alteradas, o componente não sofrerárenderização, apenas quando
 a informação que lhe interessa sofrer alteração ele o será.
+
+* Cada estado global da aplicação é representado por um reducer. O reducer é uma
+função que retorna o estado em si (array, objeto, etc...).
+
+* Os estados são combinados em um rootReducer utilizando a função combineReducers
