@@ -60,3 +60,7 @@ qualidade de vida e limpeza de código.
 permite a abstração dos componentes sem ter que passar a função de alteração de estado
 como props para baixo. O hook pode ser chamado de dentro do componente filho e este
 ter acesso ao dispatch por si só.
+
+* O *redux-saga* é um *middleware* que intercepta uma *action* que está sendo executada
+para fazer algum tipo de chamada assíncrona, geralmente validando ou invalidando a
+*action*.
