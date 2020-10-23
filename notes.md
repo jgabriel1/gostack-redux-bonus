@@ -55,3 +55,8 @@ qualidade de vida e limpeza de código.
 
 * O *reducer* deve guardar toda a regra de negócio da alteração de estado. A *action*
 é apenas a mensageira do tipo de alteração.
+
+* A utilização de um estado global, seja por meio do redux ou por meio do useContext
+permite a abstração dos componentes sem ter que passar a função de alteração de estado
+como props para baixo. O hook pode ser chamado de dentro do componente filho e este
+ter acesso ao dispatch por si só.
