@@ -43,3 +43,15 @@ função que retorna o estado em si (array, objeto, etc...).
 
 * As actions são funções que servem apenas como factories para o objeto que carrega
 o *type* e, quando houver, o *payload* do dispatch.
+
+* Assim como no setState do React, faz-se necessário que o reducer altere o estado
+respeitando a imutabilidade. Ou seja, nada de push em array, sempre copiar o estado
+anterior alterando-o ou não.
+
+* A função produce da biblioteca immer invalida o ponto anterior de modo que o objeto
+draft que ela recebe pode ser alterado tranquilamente desconsiderando a imutabilidade,
+diminuindo assim a verbosidade da atualização de estado. É apenas uma mudança de
+qualidade de vida e limpeza de código.
+
+* O *reducer* deve guardar toda a regra de negócio da alteração de estado. A *action*
+é apenas a mensageira do tipo de alteração.

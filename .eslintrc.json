@@ -40,6 +40,9 @@
     "camelcase": "off",
     "@typescript-eslint/ban-types": "off",
     "no-use-before-define": "off",
+    "consistent-return": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
     "react/jsx-filename-extension": [
       1,
       {
