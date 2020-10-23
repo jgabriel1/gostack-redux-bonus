@@ -40,3 +40,6 @@ a informação que lhe interessa sofrer alteração ele o será.
 função que retorna o estado em si (array, objeto, etc...).
 
 * Os estados são combinados em um rootReducer utilizando a função combineReducers
+
+* As actions são funções que servem apenas como factories para o objeto que carrega
+o *type* e, quando houver, o *payload* do dispatch.
