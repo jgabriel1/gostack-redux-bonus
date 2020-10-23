@@ -64,3 +64,7 @@ ter acesso ao dispatch por si só.
 * O *redux-saga* é um *middleware* que intercepta uma *action* que está sendo executada
 para fazer algum tipo de chamada assíncrona, geralmente validando ou invalidando a
 *action*.
+
+* A separação da action em *request*, *success* e *failure* permite que o reducer faça
+a alteração de estado apenas em caso de sucesso da ação. Com esse desacoplamento, a
+aplicação pode lidar com falhas sem ter que alterar o estado ou reverter uma mudança dele.
