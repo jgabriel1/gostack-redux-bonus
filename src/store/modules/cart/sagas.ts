@@ -1,5 +1,5 @@
-import { AxiosResponse } from 'axios';
 import { all, select, takeLatest, call, put } from 'redux-saga/effects';
+import { AxiosResponse } from 'axios';
 
 import { IState } from '../..';
 import api from '../../../services/api';
@@ -8,6 +8,7 @@ import {
   addProductToCartRequest,
   addProductToCartSuccess,
 } from './actions';
+import { Actions } from './types';
 
 type CheckProductStockRequest = ReturnType<typeof addProductToCartRequest>;
 
@@ -36,10 +37,8 @@ function* checkProductStock({ payload }: CheckProductStockRequest) {
   } else {
     yield put(addProductToCartFailure(product.id));
   }
-
-  console.log(currentQuantity);
 }
 
 export default all([
-  takeLatest('ADD_PRODUCT_TO_CART_REQUEST', checkProductStock),
+  takeLatest(Actions.addProductToCartRequest, checkProductStock),
 ]);

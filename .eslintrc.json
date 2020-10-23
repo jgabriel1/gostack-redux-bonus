@@ -43,6 +43,7 @@
     "consistent-return": "off",
     "no-plusplus": "off",
     "no-param-reassign": "off",
+    "no-shadow": "off",
     "react/jsx-filename-extension": [
       1,
       {
